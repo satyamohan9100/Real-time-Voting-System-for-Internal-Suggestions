@@ -96,6 +96,10 @@ Real-time Voting System_FastAPI_React/
 3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
+   # For WebSocket support (required for real-time updates):
+   pip install "uvicorn[standard]"
+   # Or, if you already have Uvicorn, install websockets:
+   pip install websockets
    ```
 
 4. **Run the backend server:**
@@ -194,6 +198,19 @@ The application uses WebSockets to provide instant updates when:
 1. Build the production bundle: `npm run build`
 2. Serve static files using a web server
 3. Update API base URL for production
+
+## Troubleshooting
+
+### WebSocket Not Working / 404 on `/ws`
+If you see errors like `No supported WebSocket library detected` or `404 Not Found` when connecting to `/ws`, make sure you have installed a WebSocket library:
+
+```bash
+pip install "uvicorn[standard]"
+# or
+pip install websockets
+```
+
+Then restart your backend server. This is required for FastAPI to support WebSocket connections.
 
 ## Contributing
 
