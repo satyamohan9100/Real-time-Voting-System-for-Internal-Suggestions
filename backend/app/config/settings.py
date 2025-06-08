@@ -1,4 +1,4 @@
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
 from typing import List
 
 class Settings(BaseSettings):
@@ -16,7 +16,7 @@ class Settings(BaseSettings):
         "http://127.0.0.1:3000"
     ]
     
-    class Config(BaseSettings.Config):
+    class Config:
         env_file = ".env"
 
 def get_settings() -> Settings:
