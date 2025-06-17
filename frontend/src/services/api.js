@@ -45,9 +45,9 @@ class ApiService {
     });
   }
 
-  async healthCheck() {
-    return this.request('/health');
-  }
+  // async healthCheck() {
+  //   return this.request('/health');
+  // }
 }
 
 export const apiService = new ApiService();

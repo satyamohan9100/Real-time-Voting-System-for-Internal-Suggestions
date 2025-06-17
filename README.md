@@ -136,7 +136,7 @@ The frontend will be available at `http://localhost:3000`
 - `GET /api/suggestions` - Get all suggestions with vote counts
 - `POST /api/suggestions` - Create a new suggestion
 - `POST /api/vote` - Vote/unvote on a suggestion
-- `GET /api/health` - Health check endpoint
+<!-- - `GET /api/health` - Health check endpoint -->
 
 ### WebSocket
 - `WS /ws` - WebSocket endpoint for real-time updates

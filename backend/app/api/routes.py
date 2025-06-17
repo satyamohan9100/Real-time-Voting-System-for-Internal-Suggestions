@@ -68,7 +68,7 @@ async def vote(vote_data: VoteRequest):
         logger.error(f"Error processing vote: {e}")
         raise HTTPException(status_code=400, detail=str(e))
 
-@router.get("/health")
-async def health_check():
-    """Health check endpoint."""
-    return {"status": "healthy"}
+# @router.get("/health")
+# async def health_check():
+#     """Health check endpoint."""
+#     return {"status": "healthy"}
